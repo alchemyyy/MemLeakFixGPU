@@ -1,6 +1,6 @@
-package none.alchemy.gpumemleakfix.mixin;
+package none.alchemy.memleakfixgpu.mixin;
 
-import none.alchemy.gpumemleakfix.GpuMemLeakFix;
+import none.alchemy.memleakfixgpu.MemLeakFixGPU;
 import com.mojang.blaze3d.pipeline.RenderTarget;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -19,9 +19,9 @@ public abstract class RenderTargetCleanupMixin {
     @Override
     protected void finalize() throws Throwable {
         try {
-            GpuMemLeakFix.enqueueRenderTargetIds(this.depthBufferId, this.colorTextureId, this.frameBufferId);
+            MemLeakFixGPU.enqueueRenderTargetIds(this.depthBufferId, this.colorTextureId, this.frameBufferId);
         } catch (Throwable throwable) {
-            GpuMemLeakFix.LOGGER.error("Error during render target finalize", throwable);
+            MemLeakFixGPU.LOGGER.error("Error during render target finalize", throwable);
         } finally {
             super.finalize();
         }

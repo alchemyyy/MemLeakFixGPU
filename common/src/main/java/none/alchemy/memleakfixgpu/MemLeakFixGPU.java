@@ -1,4 +1,4 @@
-package none.alchemy.gpumemleakfix;
+package none.alchemy.memleakfixgpu;
 
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.platform.TextureUtil;
@@ -7,14 +7,14 @@ import net.minecraft.core.Vec3i;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public final class GpuMemLeakFix {
-    public static final String MOD_ID = "gpumemleakfix";
-    public static final String MOD_NAME = "GPU Memory Leak Fix";
+public final class MemLeakFixGPU {
+    public static final String MOD_ID = "memleakfixgpu";
+    public static final String MOD_NAME = "MemLeakFixGPU";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_NAME);
     private static final ConcurrentLinkedQueue<Vec3i> QUEUE = new ConcurrentLinkedQueue<>();
     private static final int GL_FRAMEBUFFER = 36160;
 
-    private GpuMemLeakFix() {
+    private MemLeakFixGPU() {
     }
 
     public static void init() {

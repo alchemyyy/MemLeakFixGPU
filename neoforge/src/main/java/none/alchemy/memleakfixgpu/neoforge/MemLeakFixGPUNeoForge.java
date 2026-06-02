@@ -1,21 +1,21 @@
-package none.alchemy.gpumemleakfix.neoforge;
+package none.alchemy.memleakfixgpu.neoforge;
 
-import none.alchemy.gpumemleakfix.GpuMemLeakFix;
+import none.alchemy.memleakfixgpu.MemLeakFixGPU;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.common.NeoForge;
 
-@Mod(GpuMemLeakFix.MOD_ID)
-public class GpuMemLeakFixNeoForge {
-    public GpuMemLeakFixNeoForge(IEventBus eventBus) {
-        GpuMemLeakFix.init();
+@Mod(MemLeakFixGPU.MOD_ID)
+public class MemLeakFixGPUNeoForge {
+    public MemLeakFixGPUNeoForge(IEventBus eventBus) {
+        MemLeakFixGPU.init();
         NeoForge.EVENT_BUS.register(this);
     }
 
     @SubscribeEvent
     public void onClientTick(ClientTickEvent.Post event) {
-        GpuMemLeakFix.drainCleanupQueue();
+        MemLeakFixGPU.drainCleanupQueue();
     }
 }

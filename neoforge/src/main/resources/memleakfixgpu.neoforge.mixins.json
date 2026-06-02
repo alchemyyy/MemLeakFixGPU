@@ -1,7 +1,7 @@
 {
   "required": false,
   "minVersion": "0.8",
-  "package": "none.alchemy.gpumemleakfix.forge.mixin",
+  "package": "none.alchemy.memleakfixgpu.neoforge.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [],
   "client": [],

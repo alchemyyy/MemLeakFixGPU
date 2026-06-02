@@ -15,7 +15,7 @@
     "environment": "client",
     "entrypoints": {
         "client": [
-            "none.alchemy.gpumemleakfix.fabric.GpuMemLeakFixFabricClient"
+            "none.alchemy.memleakfixgpu.fabric.MemLeakFixGPUFabricClient"
         ]
     },
     "mixins": [

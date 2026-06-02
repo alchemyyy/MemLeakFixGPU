@@ -1,4 +1,4 @@
-# GPU Memory Leak Fix
+# MemLeakFixGPU
 
 Cleans up stale RenderTarget GPU resources.
 
@@ -16,8 +16,7 @@ Cleans up stale RenderTarget GPU resources.
 
 Jars are in `fabric/build/libs`, `forge/build/libs`, and `neoforge/build/libs`.
 
-Discord: https://discord.gg/3TCfgHx7gv
-
 ## Credits
 
 - Alchemyyy
+- Discord: https://discord.gg/3TCfgHx7gv
